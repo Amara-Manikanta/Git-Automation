@@ -4,7 +4,7 @@
 echo "performing pull in main brach"
 git pull
 
-branch_name=$(date "+%Y-%m-%d,%H:%M")
+branch_name=$(date "+%Y-%m-%d-%R")
 echo" Present branch name : $branch_name \n"
 
 git checkout -b $branch_name
