@@ -4,12 +4,14 @@
 echo "performing pull in main brach"
 git pull
 
-branch_name=$(date "+%Y%m%d%H%M.%S")
+branch_name=$(date "+%Y-%m-%d,%H:%M")
 echo" Present branch name : $branch_name \n"
 
 git checkout -b $branch_name
 
 echo -e "Checkout is done"
+
+echo -e "Please press enter once files are added" 
 read varname
 echo -e" Checking the status of the files "
 
@@ -44,6 +46,6 @@ git branch
 
 echo -e "Deleting the branch"
 
-git branch -d $branch_name
+git branch -D $branch_name
 
 echo -e " Everything is done "
