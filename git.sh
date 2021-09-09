@@ -34,4 +34,16 @@ git push --set-upstream origin $branch_name
 
 git push
 
+echo -e "Please press enter once merge is done"
+read varname1
+
+git checkout main
+
+echo -e "checkedout to main branch"
+git branch
+
+echo -e "Deleting the branch"
+
+git branch -d $branch_name
+
 echo -e " Everything is done "
