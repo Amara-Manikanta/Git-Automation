@@ -1,2 +1,2 @@
 # Git-Automation
-Automating git git commands through shell script
+Automating git commands through shell script
