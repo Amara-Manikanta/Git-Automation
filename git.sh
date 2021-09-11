@@ -4,7 +4,9 @@
 echo "performing pull in main brach"
 git pull
 
-branch_name="Manikanta"$(date "+%Y%d-%m-%Y")
+
+#"$(date "+%Y%d-%m-%Y")"
+branch_name="${PWD##*/}$RANDOM"
 echo" Present branch name : $branch_name \n"
 
 git checkout -b $branch_name
