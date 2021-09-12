@@ -88,7 +88,13 @@ for i in range(l):
         j = local_files_without_path.index(git_files_without_path[i])
         compare_output = os.system('FC '+git_files[i] +' '+local_files[j] )
         print(git_files_without_path[i], compare_output)
-        #FC File1.txt File2.txt >NUL && Echo Same || Echo Different or error
+
+            #FC File1.txt File2.txt >NUL && Echo Same || Echo Different or error
+            # -1 Invalid syntax(e.g.only one file passed)
+            # 0 The files are identical.
+            #1 The files are different.
+            #2 Cannot find at least one of the files.
+
         if compare_output >= 1:
             repositorty_name = git_files[i].split('\\')
             time.sleep(5)
