@@ -50,6 +50,9 @@ def git_automation(repository_name,local_file_path,script_name,git_script_path):
     os.system('git branch -D '+str(branch_name))
     sleep_time()
     os.system('git branch')
+
+    os.system('git pull')
+
     print(" Everything is done ")
 
 
